@@ -15,7 +15,8 @@ def post_register():
     email = request.form.get("email")
     password = request.form.get("password")
 
-    db.query(f"insert into user (name, email, password) values('{name}', '{email}', '{password}')")
+    db.query(f"insert into user (name, email, password) 
+             values('{name}', '{email}', '{password}')")
 
     return "user registered successfully"
 
